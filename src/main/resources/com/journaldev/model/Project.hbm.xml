@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.journaldev.model.Project" table="projects" schema="newfont_dati">
+        <id name="pk_projects" column="pk_projects" />
+
+        <bag name="pk_pcab_nodes" fetch="subselect" schema="newfont_dati">
+            <key column="pk_pcab_nodes" />
+            <one-to-many class="com.journaldev.model.Node"  />
+        </bag>
+
+<!--        <set name="pk_pcab_nodes" table="pcab_nodes" cascade="all" fetch="join">-->
+<!--            <key column="pk_pcab_nodes" />-->
+<!--            <one-to-many class="com.journaldev.model.Node"/>-->
+<!--        </set>-->
+    </class>
+</hibernate-mapping>

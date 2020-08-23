@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.journaldev.model.Node" table="pcab_nodes" schema="newfont_dati">
+        <id name="pk_pcab_nodes" column="pk_pcab_nodes"/>
+        <property name="id_entity_classification" column="id_entity_classification" />
+        <many-to-one name="project" column="pk_pcab_nodes" class="com.journaldev.model.Project" insert="false" update="false"/>
+    </class>
+</hibernate-mapping>
