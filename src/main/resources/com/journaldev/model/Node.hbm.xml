@@ -1,3 +1,4 @@
+<!-- se vuoi usare questo xml al posto di annotazioni -->
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD//EN"
